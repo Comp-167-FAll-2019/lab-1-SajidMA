@@ -15,14 +15,65 @@ public class Contact {
     private String phoneNumber;
     private String emailAddress;
 
-    public Contact(String firstName, String lastName, String phoneNumber, String emailAddress) {
+    public Contact(String firstName, String lastName, String phoneNumber, String emailAddress) 
+    {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.emailAddress = emailAddress;
     }
     
-    public String toString(){
-        return firstName + " " + lastName  " " + phoneNumber + " " + emailAddress;
+    public String getFirstName()
+    {
+        return firstName;
+    }
+    
+    public String getLastName()
+    {
+        return lastName;
+    }
+    
+    public String getPhoneNumber()
+    {
+       return phoneNumber; 
+    }
+    public String toString()
+    {
+        return getFirstName() + " " + getLastName() + " " + getPhoneNumber() + " " + getEmailAddress();
+    }
+
+    /**
+     * @param firstName the firstName to set
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    /**
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    /**
+     * @param phoneNumber the phoneNumber to set
+     */
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    /**
+     * @return the emailAddress
+     */
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    /**
+     * @param emailAddress the emailAddress to set
+     */
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 }
